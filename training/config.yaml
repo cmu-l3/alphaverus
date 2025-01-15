@@ -1,0 +1,19 @@
+EXP_NAME: Test Experiment
+MODEL_NAME: ${MODEL_NAME:-meta-llama/Meta-Llama-3.1-70B-Instruct}
+
+MAX_PROGRAMS: 600
+PROGRAMS_FILE: ${PROGRAMS_FILE:-dafnys.json}
+
+# Batch processing configuration
+BATCH_SIZE: 64
+WAIT_TIME: 3600  # Time to wait when no tasks available (in seconds)
+
+CONVERT:
+  MAX_GENS: 256
+  TEMPERATURE: 0.7
+  
+TREE:
+  METHOD: "1+2"
+  MAX_DEPTH: 8
+  GEN_TEMPERATURE: 0.7
+  NODE_TEMPERATURE: 0.1
